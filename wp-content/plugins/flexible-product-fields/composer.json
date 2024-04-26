@@ -1,0 +1,93 @@
+{
+	"name": "wpdesk/flexible-product-fields",
+	"authors": [
+		{
+			"name": "Grzegorz",
+			"email": "grola@wpdesk.pl"
+		}
+	],
+	"prefer-stable": true,
+	"minimum-stability": "stable",
+	"config": {
+		"sort-packages": true,
+		"platform": {
+			"php": "7.3.33"
+		},
+		"allow-plugins": {
+			"cweagans/composer-patches": true,
+			"kylekatarnls/update-helper": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"wpdesk/wp-codeception": true,
+			"wpdesk/wp-wpdesk-composer": true
+		},
+		"platform-check": false
+	},
+	"require": {
+		"php": ">=7.3",
+		"psr/log": "^1.0.1",
+		"wpdesk/ltv-dashboard-widget": "^1.3.0",
+		"wpdesk/wp-wpdesk-helper-override": "^1.1.0"
+	},
+	"require-dev": {
+		"10up/wp_mock": "*",
+		"codeception/module-asserts": "^1.3",
+		"composer/composer": "1.10.25",
+		"mockery/mockery": "*",
+		"monolog/monolog": "^2.9",
+		"phpunit/phpunit": "^9",
+		"wpdesk/wp-codeception": "^2",
+		"wpdesk/wp-plugin-flow-free": "^1.0.2",
+		"wpdesk/wp-view": "^2.0",
+		"wpdesk/wp-wpdesk-composer": "^2",
+		"wpdesk/wp-wpdesk-deactivation-modal": "^1.5.3",
+		"wpdesk/wp-wpdesk-marketing": "^1.1"
+	},
+	"extra": {
+		"text-domain": "flexible-product-fields",
+		"translations-folder": "lang",
+		"translation-file-headers": {
+			"Project-Id-Version": "Flexible Product Fields",
+			"Last-Translator": "Mateusz Gbiorczyk <mateusz.gbiorczyk@wpdesk.net>",
+			"X-Poedit-WPHeader": "flexible-product-fields.php"
+		},
+		"po-files": {
+			"pl_PL": "pl_PL.po",
+			"es_ES": "es_ES.po",
+			"de_DE": "de_DE.po"
+		},
+		"minify-assets" : {
+			"js" : [
+				"assets/js/fpf_product.js",
+				"assets/js/admin-notice.js"
+			],
+			"css" : [
+				"assets/css/admin-notice.css",
+				"assets/css/front.css"
+			]
+		}
+	},
+	"autoload": {
+		"classmap": [
+			"inc",
+			"classes",
+			"vendor_prefixed"
+		],
+		"psr-4": {
+			"WPDesk\\FPF\\Free\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/"
+		]
+	},
+	"scripts": {
+		"test": "echo composer is alive",
+		"phpcs": "phpcs --standard=phpcs.xml.dist",
+		"phpunit-unit": "phpunit --configuration phpunit-unit.xml --coverage-text --colors=never",
+		"phpunit-unit-fast": "phpunit --configuration phpunit-unit.xml --no-coverage",
+		"phpunit-integration": "phpunit --configuration phpunit-integration.xml --coverage-text --colors=never",
+		"phpunit-integration-fast": "phpunit --configuration phpunit-integration.xml --no-coverage",
+		"docs": "apigen generate"
+	}
+}
