@@ -14,3 +14,12 @@ RewriteRule . /PremiumShoesBrand/index.php [L]
 </IfModule>
 
 # END WordPress
+# BEGIN Simply Static
+# The directives (lines) between "BEGIN Simply Static" and "END Simply Static" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<Files "C:\xampp\htdocs\PremiumShoesBrand/wp-content/uploads\simply-static\6946c2605b948275d6f62bc3ddeeef0f-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
