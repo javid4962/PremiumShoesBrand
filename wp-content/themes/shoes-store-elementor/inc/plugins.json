@@ -1,0 +1,26 @@
+[ {
+  "name": "Elementor",
+  "slug": "elementor",
+  "required": false,
+  "force_activation": false
+}, {
+  "name": "Kirki Customizer Framework",
+  "slug": "kirki",
+  "required": false,
+  "force_activation": false
+}, {
+  "name": "GTranslate",
+  "slug": "gtranslate",
+  "required": false,
+  "force_activation": false
+},{
+  "name": "FOX – Currency Switcher Professional for WooCommerce",
+  "slug": "woocommerce-currency-switcher",
+  "required": false,
+  "force_activation": false
+},{
+  "name": "WooCommerce",
+  "slug": "woocommerce",
+  "required": false,
+  "force_activation": false
+}]
